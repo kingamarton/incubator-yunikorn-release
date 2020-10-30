@@ -69,6 +69,8 @@ spec:
               value: "{{ .Values.admission_controller_image.pullPolicy }}"
             - name: ADMISSION_CONTROLLER_IMAGE_PULL_SECRETS
               value: "{{ .Values.ImagePullSecrets }}"
+            - name: ENABLE_CONFIG_HOT_REFRESH
+              value: 'false'
           resources:
             requests:
               cpu: {{ .Values.resources.requests.cpu }}

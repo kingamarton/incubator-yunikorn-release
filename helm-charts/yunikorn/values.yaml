@@ -25,12 +25,12 @@ serviceAccount: yunikorn-admin
 image:
   repository: apache/yunikorn
   tag: scheduler-latest
-  pullPolicy: Always
+  pullPolicy: Never
 
 admission_controller_image:
   repository: apache/yunikorn
   tag: admission-latest
-  pullPolicy: Always
+  pullPolicy: Never
 
 web_image:
   repository: apache/yunikorn
@@ -79,7 +79,6 @@ configuration: |
       queues:
         - name: root
           submitacl: '*'
-
 # Use this configuration to configure absolute capacities for yunikorn queues
 #configuration: |
 #  partitions:
